@@ -8,6 +8,7 @@ import {
   Dimensions,
   Image,
 } from 'react-native';
+import { image185 } from '../api/movieDB';
 
 var {width, height} = Dimensions.get('window');
 
@@ -41,7 +42,8 @@ function MovieList({data, title, seeAll}) {
               <View style={{marginTop: 10, marginRight: 20}}>
                 <Image
                   source={{
-                    uri: 'https://image.tmdb.org/t/p/original/mhc5CvIZBN08cytjaZMbncw4v5u.jpg',
+                    // uri: 'https://image.tmdb.org/t/p/original/mhc5CvIZBN08cytjaZMbncw4v5u.jpg',
+                    uri: image185(item.poster_path)
                   }}
                   style={{
                     width: width * 0.33,
@@ -50,9 +52,9 @@ function MovieList({data, title, seeAll}) {
                   }}
                 />
                 <Text style={{color: 'white', marginLeft: 30}}>
-                  {movieName.length > 14
-                    ? movieName.slice(0, 14) + '...'
-                    : movieName}
+                  {item.title?.length > 14
+                    ? item.title.slice(0, 14) + '...'
+                    : item.title}
                 </Text>
               </View>
             </TouchableWithoutFeedback>
