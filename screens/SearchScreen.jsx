@@ -12,14 +12,14 @@ function SearchScreen() {
     const navigation = useNavigation();
     const [results, setResults] = useState([]);
     const [loading, setLoading] = useState(false);
-    let movieName = 'Wonder Woman (2017)';
+    // let movieName = 'Wonder Woman (2017)';
     const handleSearch = search=>{
-        if(search && search.length>2){
+        if(search && search.length>0){
             setLoading(true);
             searchMovies({
                 query: search,
                 include_adult: true,
-                page: '1'
+                page: '2'
             }).then(data=>{
                 // console.log('got search results: ', data);
                 setLoading(false);
@@ -30,7 +30,7 @@ function SearchScreen() {
             setResults([])
         }
       }
-    const handleTextDebounce = useCallback(debounce(handleSearch, 400), []);
+    const handleTextDebounce = useCallback(debounce(handleSearch, 200), []);
   return (
     <SafeAreaView style={{backgroundColor: '#1f2937', flex: 1}}>
         <View style={{ marginTop: 10 ,marginHorizontal: 10, marginBottom: 3, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', borderColor: '#737373', borderWidth: 2, borderRadius: 30}}>

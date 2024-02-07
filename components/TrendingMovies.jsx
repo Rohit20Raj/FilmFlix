@@ -8,7 +8,7 @@ var {width, height} = Dimensions.get('window');
 function TrendingMovies({data}) {
   return (
     <View style={{marginVertical: 16}}>
-      <Text style={{color: 'white', fontSize: 20, marginBottom: 20, marginLeft: 10}}>
+      <Text style={{color: 'white', fontSize: 20, marginBottom: 20, marginLeft: 12}}>
         Trending Movies
       </Text>
       <Carousel 

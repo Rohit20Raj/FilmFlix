@@ -20,6 +20,7 @@ function MovieList({data, title, seeAll}) {
       <View
         style={{
           marginHorizontal: 10,
+          marginLeft: 15,
           flexDirection: 'row',
           justifyContent: 'space-between',
           alignItems: 'center',
@@ -39,7 +40,7 @@ function MovieList({data, title, seeAll}) {
             <TouchableWithoutFeedback
               key={index}
               onPress={() => navigation.push('Movie', item)}>
-              <View style={{marginTop: 10, marginRight: 20}}>
+              <View style={{marginTop: 10, marginRight: 15}}>
                 <Image
                   source={{
                     // uri: 'https://image.tmdb.org/t/p/original/mhc5CvIZBN08cytjaZMbncw4v5u.jpg',
@@ -51,7 +52,7 @@ function MovieList({data, title, seeAll}) {
                     borderRadius: 30,
                   }}
                 />
-                <Text style={{color: 'white', marginLeft: 30}}>
+                <Text style={{color: 'white', textAlign: 'center'}}>
                   {item.title?.length > 14
                     ? item.title.slice(0, 14) + '...'
                     : item.title}
