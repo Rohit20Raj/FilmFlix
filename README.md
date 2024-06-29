@@ -1,3 +1,6 @@
+![FilmFlix](https://github.com/Rohit20Raj/FilmFlix/assets/85450970/e39755d5-0019-47f6-89d3-227533fb6f91)
+
+
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
 # Getting Started
